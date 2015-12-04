@@ -64,7 +64,8 @@ public class Controle extends HttpServlet {
 		
 			try {
 				
-				new FuncionarioDao().create(f);
+				FuncionarioDao dao = new FuncionarioDao();
+                                dao.create(f);
 				// Comando para enviar uma msg para pagina jsp
 				request.setAttribute("msg", "Dados Gravados");
 				
